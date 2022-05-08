@@ -1,12 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100&family=Fredoka:wght@300&display=swap');
 /* reset */
 html{
     font-size: 62.5%; 
-    background: url(../asset/montage.jpg) no-repeat center center / over;
 }
 body{
   font: 1.6rem sans-serif;
-  font-family: 'Fredoka', sans-serif;
-  line-height: 1.6;
+  font-family: 'Fira Sans Condensed', sans-serif;  
   margin: 0;
 }
 *{
@@ -80,13 +79,14 @@ nav ul li{
     width: calc(100%/3);
     font-size: 0;
     text-align: center;
-    
-    
 }
 nav ul li a{
     text-transform: uppercase;
     font-size: initial;
     color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     
 }
 nav ul li:hover{
@@ -104,41 +104,82 @@ nav ul li:hover a{
     height: 100vh;
     width: 100vw;
 }
-
+h2 {
+    margin-left: 5%;
+    padding-top: 5%;
+    border-bottom: solid 0.1rem;
+    width: fit-content;
+    height: fit-content;
+}
 .home_screen h2{
-    padding-top: 15%;    
+    padding-top: 15%;
+    text-align: center; 
+    margin-left: 45%;   
 }
 .home_screen * {
     color: #fff;
     text-align: center;
     line-height: 6rem;
 }
-.theme_gallery ul{
+.comp{
+    background-color: beige;
+    height: 100vh;
+    width: 100vw;
+}
+.comp ul{
+    margin: 10% 10%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
+    gap: 50px;
+    
+}
+.comp .qualities{
+    margin: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 50px;
+    text-align: center;
+    
+}
+.comp .qualities li{
+    list-style:square;
 }
 
-.dwnld{
-    margin-top: 0.5rem;
-    max-width: 120rem;
-    background-color: #a9a9a9;
+.comp ul img{
+    object-fit: contain;
+    filter:grayscale(100%);
+
+}
+
+.exp{
+   background: url(../asset/alex-rodriguez-VR-wUq_JYAk-unsplash.jpg);
+   background-size:cover;
+   background-origin: border-box;
+   height: 100vh;
+   width: 100vw;
+}
+
+.exp .split{
+    margin: 5% 10%  ;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.exp li{
+    line-height: 3rem;
+}
+.contacts{
     text-align: center;
+}
+.contacts h2{
+    margin-left: 45%;
+}
+.contacts ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     line-height: 6rem;
 }
-.dwnld h3{
-    text-align: center;
-    color: #fff;
-}
-.dwnld button{
-    background-color: #fff;
-    color: #222;
-    text-align: center;
-    line-height: 5rem;
-    width: 200px;
-    border-radius: 0.2rem;
-    margin: 0 0 2rem;
-    box-shadow: #222;
-}
+
 footer{
     max-width: 100%;
     text-align: center;
