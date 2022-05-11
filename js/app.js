@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", e => {
   let el = document.querySelector("nav ul li:last-of-type");
   let em = document.querySelector("header h1");
   let er = document.querySelector("nav ul li:first-of-type");
+  let element = document.querySelector("header h1");
+  console.log(element);
+  let element_2 = document.querySelector("header nav");
 
-  var element = document.querySelector("header h1");
-  var element_2 = document.querySelector("header nav");
-
-  function funky() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+  const funky = () => {
+    const element_3 = document.body;
+    element_3.classList.toggle("dark-mode");
   };
 
   function shownav() {
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", e => {
   }
 
   el.addEventListener("click", () => {
+    el.classList.toggle("anim-in");
     funky();
   });
   em.addEventListener("click", () => {

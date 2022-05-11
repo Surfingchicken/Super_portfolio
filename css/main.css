@@ -11,6 +11,7 @@ body{
   margin: 0;
   overflow-x: hidden;
   font-weight: 600;
+  transition: all .8s ease-in-out;
 }
 h2{
     font-weight: 900;
@@ -74,7 +75,28 @@ header h1, nav{
     width: calc(100%/2);
 }
 header h1{
-    text-align: center; 
+    text-align: center;
+    
+}
+/* anim */
+.anim-in{
+    animation: texte .5s linear 1 alternate;     
+    transform-origin: center center;
+}
+@keyframes texte{
+    from{
+        opacity: 0;
+        transform: scale(2.0);
+        
+        color: rgb(255, 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+       
+        color: #fff;
+    }
+    
 }
 nav ul{
     font-size: 0;
@@ -89,9 +111,9 @@ nav ul li:first-of-type{
     display: none;
 }
 nav ul li:last-of-type{
-    width: calc(100%*1/10);
+    width: calc(100% * 1 / 10);
 }
-nav ul li a{
+nav ul li a, nav ul li button{
     text-transform: uppercase;
     font-size: initial;
     color: #fff;
@@ -103,9 +125,8 @@ nav ul li a{
 nav ul li button{
     color: #fff;
     font-size:xx-large;
-    height: 100%;
-    width: 100%;
     align-self: center;
+    
 }
 nav ul li:hover{
     background-color: #fff;
@@ -215,7 +236,7 @@ footer{
     
 }
 .dark-mode{
-    filter: invert(1);
+    filter: grayscale(100%);
 }
 /* responsive */
 @media screen and (max-width: 700px){
