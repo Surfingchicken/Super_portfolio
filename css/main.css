@@ -10,7 +10,10 @@ body{
   font-family: 'Fira Sans Condensed', sans-serif;  
   margin: 0;
   overflow-x: hidden;
-  font-weight: 200;
+  font-weight: 600;
+}
+h2{
+    font-weight: 900;
 }
 *{
     box-sizing: border-box; 
@@ -174,6 +177,10 @@ h2 {
    height: 100vh;
    width: 100vw;
    color: #fff;
+}
+
+.exp h2 {
+    color :#222;
 }
 
 .exp .split{
