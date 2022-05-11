@@ -3,6 +3,7 @@
 /* reset */
 html{
     font-size: 62.5%; 
+    scroll-behavior: smooth;
 }
 body{
   font: 1.6rem sans-serif;
@@ -31,7 +32,6 @@ fieldset{
 button{
     background: transparent;
     font-size: inherit;
-    border: 0;
 }
 a{
     text-decoration: none;
@@ -81,6 +81,9 @@ nav ul li{
     width: calc(100%*2.25/10);
     font-size: 0;
     text-align: center;
+}
+nav ul li:first-of-type{
+    display: none;
 }
 nav ul li:last-of-type{
     width: calc(100%*1/10);
@@ -177,11 +180,12 @@ h2 {
     margin: 5% 10%  ;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
 }
 .exp li{
-    line-height: 4rem;
+    line-height: 5rem;
 }
 .contacts{
     text-align: center;
@@ -206,4 +210,136 @@ footer{
 .dark-mode{
     filter: invert(1);
 }
+/* responsive */
+@media screen and (max-width: 700px){
+    *{
+        margin: 0;
+        height: fit-content;
+    }
+    header h1{
+        width: 100vw;
+        display: block;
+    }
+    header nav{
+       display: none;
+       width: 100vw;
+    }
+    nav {
+        width: 100vw;
+    }
+    nav ul li:first-of-type{
+        display: inline-block;
+        width: calc(100%/10);
+    }
+    nav ul li{
+        width: calc(100%/5);
+        height: 100%;
+    }
+   
+    .show{
+        display: inline-block;
+    }
+    .hide{
+        display: none;
+    }
+    .home_screen{
+        height: 100vh;
+    }
+    .home_screen p{
+        margin-top: 6rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .comp ul {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 1.25rems;
+    }
+    .comp{
+        height: fit-content ;
 
+    }
+    .comp .qualities{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr) ;
+        gap: 0.625rem;
+    }
+    .comp .lang{
+        margin-bottom: 0;
+    }
+    .exp{
+        margin-top: 0;
+        height: min-content;
+        padding-bottom: 5%;
+    }
+    .exp .split{
+        display: block;
+        
+        
+    }
+    .contacts ul {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    footer{
+        height: fit-content;
+    }
+    
+    
+
+}
+@media screen and (max-width: 1000px) and (orientation: landscape){
+    *{
+        margin: 0;
+        height: fit-content;
+    }
+    header h1{
+        width: 100vw;
+        display: block;
+    }
+    header nav{
+       display: none;
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display: hide;
+    }
+    .home_screen{
+        height: 100vh;
+    }
+    .home_screen h2{
+        padding-top: 0;
+    }
+    .home_screen p{
+        margin-top: 6rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 0;
+    }
+    .comp{
+        height: min-content;
+    }
+    .comp .lang{
+        margin-bottom: 0;
+        padding-bottom: 5%;
+    }
+    .exp{
+        margin-top: 0;
+        height: min-content;
+        padding-bottom: 5%;
+    }
+    .exp .split{
+        display: block;
+    }
+    .contacts ul {
+        grid-template-columns: repeat(4,1fr);
+    }
+    footer{
+        height: fit-content;
+    }
+    
+    
+   
+}
