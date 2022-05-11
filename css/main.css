@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100&family=Fredoka:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300&display=swap');
+
 /* reset */
 html{
     font-size: 62.5%; 
@@ -7,6 +8,8 @@ body{
   font: 1.6rem sans-serif;
   font-family: 'Fira Sans Condensed', sans-serif;  
   margin: 0;
+  overflow-x: hidden;
+  font-weight: 200;
 }
 *{
     box-sizing: border-box; 
@@ -46,39 +49,41 @@ figcaption{
 
 }
 /*thème*/
+
 main{
     padding: 6rem 0;
 }
-main section{
-    
-}
+
 header{
   line-height: 6rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: #222;
   z-index: 4;
   color: #fff;
 }
 
-header h1, :is(nav){
+header h1, nav{
     display: inline-block;
-    width: calc(100%/2);
     vertical-align: middle;
+    width: calc(100%/2);
 }
 header h1{
-    text-align: center;
+    text-align: center; 
 }
 nav ul{
     font-size: 0;
 }
 nav ul li{
     display: inline-block;
-    width: calc(100%/3);
+    width: calc(100%*2.25/10);
     font-size: 0;
     text-align: center;
+}
+nav ul li:last-of-type{
+    width: calc(100%*1/10);
 }
 nav ul li a{
     text-transform: uppercase;
@@ -87,13 +92,21 @@ nav ul li a{
     display: inline-block;
     width: 100%;
     height: 100%;
-    
+    font-weight: 200;
+}
+nav ul li button{
+    color: #fff;
+    font-size:xx-large;
+    height: 100%;
+    width: 100%;
+    align-self: center;
 }
 nav ul li:hover{
     background-color: #fff;
 }
-nav ul li:hover a{
+nav ul li:hover a, nav ul li:hover button{
     color: #222;
+    
 }
 .home_screen{
     padding: 0;
@@ -114,7 +127,8 @@ h2 {
 .home_screen h2{
     padding-top: 15%;
     text-align: center; 
-    margin-left: 45%;   
+    margin-left: auto;
+    margin-right: auto;   
 }
 .home_screen * {
     color: #fff;
@@ -129,27 +143,25 @@ h2 {
 .comp ul{
     margin: 10% 10%;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 50px;
+    grid-template-columns: repeat(6,1fr);
+    gap: 1rem;
     
 }
-.comp .qualities{
+.comp .qualities, .comp .lang{
     margin: 5% 10%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 50px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
     text-align: center;
     
 }
-.comp .qualities li{
-    list-style:square;
+.comp .lang{
+    grid-template-columns: repeat(2,1fr);
 }
 
 .comp ul img{
     object-fit: contain;
     filter:grayscale(100%);
-
 }
 
 .exp{
@@ -158,21 +170,25 @@ h2 {
    background-origin: border-box;
    height: 100vh;
    width: 100vw;
+   color: #fff;
 }
 
 .exp .split{
     margin: 5% 10%  ;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
 }
 .exp li{
-    line-height: 3rem;
+    line-height: 4rem;
 }
 .contacts{
     text-align: center;
 }
 .contacts h2{
-    margin-left: 45%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .contacts ul{
     display: grid;
@@ -184,7 +200,10 @@ footer{
     max-width: 100%;
     text-align: center;
     color: #222;
-    height: 100vh;
+    height: 90vh;
     
+}
+.dark-mode{
+    filter: invert(1);
 }
 
