@@ -103,7 +103,7 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    width: calc(100%*2.25/10);
+    width: calc(100% * 2.25 / 10);
     font-size: 0;
     text-align: center;
 }
@@ -125,7 +125,6 @@ nav ul li a, nav ul li button{
 nav ul li button{
     color: #fff;
     font-size:xx-large;
-    align-self: center;
     
 }
 nav ul li:hover{
@@ -163,7 +162,7 @@ h2 {
     line-height: 6rem;
 }
 .comp{
-    background-color: beige;
+    background-color: rgb(223, 223, 206);
     height: 100vh;
     width: 100vw;
 }
@@ -320,19 +319,6 @@ footer{
     *{
         margin: 0;
         height: fit-content;
-    }
-    header h1{
-        width: 100vw;
-        display: block;
-    }
-    header nav{
-       display: none;
-    }
-    .show{
-        display: block;
-    }
-    .hide{
-        display: hide;
     }
     .home_screen{
         height: 100vh;
